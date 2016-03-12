@@ -4,7 +4,8 @@
 
 ### Base Docker Image
 
-* `latest`: consul 0.5
+* `latest`: consul 0.6
+* `0.6`   : consul 0.6
 * `0.5`   : consul 0.5
 
 
