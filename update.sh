@@ -10,9 +10,8 @@ fi
 versions=( "${versions[@]%/}" )
 
 
-for version in "${versions[@]}"; do	
-  fullVersion="$(git ls-remote --tags https://github.com/hashicorp/consul.git | cut -d$'\t' -f2 | grep -E '^refs/tags/v'"${version}"'.[0-9]$' | cut -dv -f2 | sort -rV | head -n1 )"
-  echo $fullVersion
+for version in "${versions[@]}"; do
+	fullVersion="$(git ls-remote --tags https://github.com/hashicorp/consul.git | cut -d$'\t' -f2 | grep -E '^refs/tags/v'"${version}"'.[0-9]$' | cut -dv -f2 | sort -rV | head -n1 )"
   (
 		set -x
 		sed '

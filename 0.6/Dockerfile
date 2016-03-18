@@ -3,7 +3,7 @@ MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
 ENV CONSUL_MAJOR   0.6
-ENV CONSUL_RELEASE 0.6.3
+ENV CONSUL_RELEASE 0.6.4
 
 ## Packages
 RUN set -x \
