@@ -26,6 +26,6 @@ EXPOSE 8300 8301 8301/udp 8302 8302/udp 8400 8500 8600 8600/udp
 
 VOLUME ["/var/lib/consul"]
 
-CMD ["consul", "agent", "-config-file", "/etc/consul/config/server.json"]
+CMD ["consul", "agent", "-config-file", "/etc/consul/server.json"]
 
 
