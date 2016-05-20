@@ -16,9 +16,7 @@ if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
   echo "========================================================================"
   echo "startup: run expect                                                     "
   echo "========================================================================"
-  exec confd -backend=rancher --prefix=/2015-07-25 
- 
-  exec consul agent -config-file=/etc/consul/server.json
+  exec confd -backend=rancher --prefix=/2015-07-25 -interval=60
 else
   exec "$@"
 fi

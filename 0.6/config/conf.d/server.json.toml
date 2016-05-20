@@ -11,3 +11,4 @@ keys = [
   "/services/consul/metadata/enc.key",
   "/self/container/service_index",
 ]
+reload_cmd = "consul agent -config-file=/etc/consul/server.json"
