@@ -4,6 +4,7 @@ dest = "/etc/consul/server.json"
 owner = "root"
 mode = "0644"
 keys = [
+	"self/service/name"
   "/self/service/containers",
   "/containers",
   "self/container/name",

@@ -1,13 +1,11 @@
 {
-  {{ if (eq (getv "/self/container/service_index") "1") }}"bootstrap": true,{{else}}"bootstrap": false,{{end}}
+  "bootstrap": true,
   "datacenter": "dc1",
   "log_level": "INFO",
   "bind_addr": "0.0.0.0",
   "client_addr": "0.0.0.0",
   "advertise_addr": "{{getv "/self/container/primary_ip"}}",
-  {{ if (eq (getv "/self/container/service_index") "1") }}
-  "retry_join": [{{ $containerName := getv "/self/service/containers/0"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
-  {{end}}
+  "retry_join": [{{ range $index,$container := gets "/self/service/containers/*" }}{{getv (printf "/containers/%s/primary_ip" $container.Value)  }}{{if $index}},{{end}}{{end}}],
   "server": true,
   "data_dir": "/var/lib/consul"
 }
