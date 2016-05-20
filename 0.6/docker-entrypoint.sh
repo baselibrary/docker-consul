@@ -10,6 +10,7 @@ VPN_TYPE=${VPN_TYPE:=openvpn}
 #run sslvpn in background
 if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
 	## check the required parameters
+  mkdir -p /etc/consul
 	
   ##### run scripts  #####
   echo "========================================================================"
