@@ -5,7 +5,7 @@
   "bind_addr": "0.0.0.0",
   "client_addr": "0.0.0.0",
   "advertise_addr": "{{getv "/self/container/primary_ip"}}",
-  "retry_join": [{{ range $index,$container := gets "/self/service/containers/*" }}{{getv (printf "/containers/%s/primary_ip" $container.Value)  }}{{if $index}},{{end}}{{end}}],
+  "retry_join": [{{ range $index,$container := gets "/self/service/containers/*" }}{{ if $index }},{{ getv (printf "/containers/%s/primary_ip" $container.Value) }}{{else}}{{ getv (printf "/containers/%s/primary_ip" $container.Value) }}{{end}}{{end}}],
   "server": true,
   "data_dir": "/var/lib/consul"
 }

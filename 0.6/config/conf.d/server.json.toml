@@ -4,7 +4,7 @@ dest = "/etc/consul/server.json"
 owner = "root"
 mode = "0644"
 keys = [
-	"self/service/name"
+  "/self/service/name"
   "/self/service/containers",
   "/containers",
   "self/container/name",
@@ -12,4 +12,3 @@ keys = [
   "/services/consul/metadata/enc.key",
   "/self/container/service_index",
 ]
-reload_cmd = "consul agent -config-file=/etc/consul/server.json"
