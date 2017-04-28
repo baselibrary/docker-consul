@@ -2,8 +2,8 @@ FROM baselibrary/baseimage:2.0.0
 MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
-ENV CONSUL_MAJOR   0.6
-ENV CONSUL_RELEASE 0.6.4
+ENV CONSUL_MAJOR   0.7
+ENV CONSUL_RELEASE 0.7.5
 
 ## Packages
 RUN set -x \

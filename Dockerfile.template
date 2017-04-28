@@ -1,4 +1,4 @@
-FROM baselibrary/baseimage:1.0.0
+FROM baselibrary/baseimage:2.0.0
 MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
@@ -18,5 +18,3 @@ WORKDIR /var/lib/consul
 VOLUME ["/var/lib/consul"]
 
 CMD ["consul", "agent", "-bootstrap", "-server", "-data-dir", "/var/lib/consul"]
-
-
